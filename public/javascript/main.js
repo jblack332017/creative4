@@ -1,3 +1,5 @@
+var totalEnerygy =0;
+
 $(document).ready(function() {
 
 $("#searchButton").click(function(e){
@@ -17,12 +19,21 @@ $("#searchButton").click(function(e){
 
       myurl ="../number?n=";
       myurl += ndbno; 
+      var energy = 0;
 
           $.ajax({
           url : myurl,
           dataType : "json",
           success : function(parsed_json2) {
             console.log(parsed_json2);
+
+            $.each(parsed_json2['report']['food']['nutrients'], function(i,item) {
+              if (item['name'] == "Energy")
+              {
+                energy = parseInt(item['value']);
+                console.log(energy);
+              }
+            });
         }  
       });
 
@@ -42,8 +53,8 @@ $("#searchButton").click(function(e){
   //   //   // everything += "</ul>";
   //   //   // $("#weather").html(everything);
   // });
-    everything += "</ul>";
-    $("#searchResults").html(everything);
+    // everything += "</ul>";
+    // $("#searchResults").html(everything);
   }  
 });
 });
