@@ -24,6 +24,7 @@ request(myurl, function(err, resp, body) {
 router.get('/word',function(req,res,next){
 	console.log("In word route");
 	var url = "https://api.nal.usda.gov/ndb/search/?format=json&q="+ req.query.w +"&sort=n&max=25&offset=0&api_key=6AyxbkhNDgZD218zKIDnJHU7ypgPw36WLslecK9W";
+	console.log(url);
 var request = require('request');
 	// request module is used to process the yql url and return the results in JSON format
 request(url, function(err, resp, body) {
