@@ -37,7 +37,7 @@ $("#searchButton").click(function(e){
                 $('#body').css("height",height);
                 $('#body').css("width",height);
                 $('#foods').append("<li>"+parsed_json['list']['item'][0]['name']+"</li>")
-                $("#searchFood").reset();
+                $("#searchFood").val('');
               }
             });
 
