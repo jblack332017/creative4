@@ -1,4 +1,4 @@
-var totalEnerygy =0;
+var totalEnergy =150*5;
 
 $(document).ready(function() {
 
@@ -34,8 +34,12 @@ $("#searchButton").click(function(e){
                 console.log(energy);
               }
             });
+
         }  
       });
+      totalEnergy += energy;
+      makeFatter();
+
 
   //   $.each(parsed_json['list']['item'], function(i,item) {
   //   //everything += "<li>"+parsed_json[i]['defenition']+"</li>";
@@ -59,3 +63,11 @@ $("#searchButton").click(function(e){
 });
 });
 });
+
+
+function makeFatter(){
+  $('#body').css("height",totalEnergy/5+"px");
+  $('#body').css("width",totalEnergy/5+"px");
+  
+
+}
