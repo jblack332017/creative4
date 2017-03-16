@@ -7,8 +7,12 @@ a {
   color: #00B7FF;
 }
 
-#container{
+.container{
 	text-align: center;
+}
+
+#containerBody{
+	display: flex;
 }
 
 #head{
@@ -21,7 +25,7 @@ a {
 	width: 150px;
     border-radius: 50%;
 	background-color: red;
-	display: inline-block;
+	margin: auto;
 }
 #legs{
 	height: 100px;
