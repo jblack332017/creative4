@@ -66,8 +66,10 @@ $("#searchButton").click(function(e){
 
 
 function makeFatter(){
-  $('#body').css("height",totalEnergy/5+"px");
-  $('#body').css("width",totalEnergy/5+"px");
+  console.log(totalEnergy);
+  var height = (totalEnergy/5)+"px";
+  $('#body').css("height",height);
+  $('#body').css("width",height);
   
 
 }
