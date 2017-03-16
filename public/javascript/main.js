@@ -62,8 +62,6 @@ $("#searchButton").click(function(e){
   }  
 });
 });
-});
-
 
 function makeFatter(){
   console.log(totalEnergy);
@@ -73,3 +71,7 @@ function makeFatter(){
   
 
 }
+
+});
+
+
