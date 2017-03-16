@@ -32,14 +32,16 @@ $("#searchButton").click(function(e){
               {
                 energy = parseInt(item['value']);
                 console.log(energy);
+                totalEnergy += energy;
+                var height = (totalEnergy/5)+"px";
+                $('#body').css("height",height);
+                $('#body').css("width",height);
               }
             });
 
         }  
       });
-      totalEnergy += energy;
-      makeFatter();
-
+      
 
   //   $.each(parsed_json['list']['item'], function(i,item) {
   //   //everything += "<li>"+parsed_json[i]['defenition']+"</li>";
@@ -62,15 +64,6 @@ $("#searchButton").click(function(e){
   }  
 });
 });
-
-function makeFatter(){
-  console.log(totalEnergy);
-  var height = (totalEnergy/5)+"px";
-  $('#body').css("height",height);
-  $('#body').css("width",height);
-  
-
-}
 
 });
 
