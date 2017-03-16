@@ -36,6 +36,8 @@ $("#searchButton").click(function(e){
                 var height = (totalEnergy/5)+"px";
                 $('#body').css("height",height);
                 $('#body').css("width",height);
+                $('#foods').append("<li>"+parsed_json['list']['item'][0]['name']+"</li>")
+                $("#searchFood").reset();
               }
             });
 

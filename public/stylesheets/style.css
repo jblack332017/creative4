@@ -31,3 +31,9 @@ a {
 	height: 100px;
 	display: inline-block;
 }
+
+#foods{
+	overflow: scroll;
+	height: 20%;
+	width: 100%;
+}
