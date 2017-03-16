@@ -38,6 +38,7 @@ $("#searchButton").click(function(e){
                 $('#body').css("width",height);
                 $('#foods').append("<li>"+parsed_json['list']['item'][0]['name']+"</li>")
                 $("#searchFood").val('');
+                $("#energy").html(totalEnergy);
               }
             });
 
